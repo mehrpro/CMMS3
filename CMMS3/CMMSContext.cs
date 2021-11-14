@@ -1,4 +1,5 @@
-﻿using CMMS3.Models.Entities;
+﻿using CMMS3.Models.Configuration;
+using CMMS3.Models.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,6 +9,31 @@ namespace CMMS3
     {
         public CMMSContext(DbContextOptions options) : base(options)
         {
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.ApplyConfiguration(new UserApplicationConfigure());
+            builder.ApplyConfiguration(new ApplicantConfigure());
+            builder.ApplyConfiguration(new IdentityCodeConfigure());
+            builder.ApplyConfiguration(new CompanyConfigure());
+            builder.ApplyConfiguration(new ConsumablePartConfigure());
+            builder.ApplyConfiguration(new GroupConfigure());
+            builder.ApplyConfiguration(new MachineryConfigure());
+            builder.ApplyConfiguration(new RequestRepairConfigure());
+            builder.ApplyConfiguration(new SubGroupConfigure());
+            builder.ApplyConfiguration(new WorkOrderConfigure());
+            builder.ApplyConfiguration(new UnitOfMeasurementConfigure());
+            builder.ApplyConfiguration(new PublicTypeConfigure());
+            builder.ApplyConfiguration(new RepairManConfigure());
+            builder.ApplyConfiguration(new RepairManListedConfigure());
+            builder.ApplyConfiguration(new SparePartConfigure());
+            builder.ApplyConfiguration(new ServicePeriodeConfigure());
+            builder.ApplyConfiguration(new IdentityMachineryConfigure());
+            builder.ApplyConfiguration(new PowerElectricalMachineryConfigure());
+            builder.ApplyConfiguration(new RepairoutConfigure());
 
         }
 
