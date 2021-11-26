@@ -13,10 +13,10 @@ namespace CMMS3.Models.Entities
             RepairManListeds = new HashSet<RepairManListed>();
         }
 
-        public long ID { get; set; }
+        public long Id { get; set; }
         public bool IsDelete { get; set; }
 
-        public long RequestID_FK { get; set; }
+        public long RequestIdFk { get; set; }
         public RequestRepair RequestRepair { get; set; }
 
 
@@ -25,13 +25,13 @@ namespace CMMS3.Models.Entities
         public int StopTotalMin { get; set; }
 
         public bool RepairOutside { get; set; }
-        public int? RepairOutSideReportID_FK { get; set; }
+        public int? RepairOutSideReportIdFk { get; set; }
 
         public DateTime StartWorking { get; set; }
         public DateTime EndWorking { get; set; }
-        public bool Cause_Exhaustion { get; set; }
-        public bool Cause_OperatorNegligence { get; set; }
-        public bool Cause_QualityofSpareParts { get; set; }
+        public bool CauseExhaustion { get; set; }
+        public bool CauseOperatorNegligence { get; set; }
+        public bool CauseQualityofSpareParts { get; set; }
 
         public bool OtherError { get; set; }
         public string OtherErrorDescription { get; set; }

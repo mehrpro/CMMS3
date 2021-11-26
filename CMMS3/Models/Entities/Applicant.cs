@@ -14,10 +14,10 @@ namespace CMMS3.Models.Entities
             Machineries = new HashSet<Machinery>();
         }
 
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string ApplicantTitle { get; set; }
         public string Description { get; set; }
-        public int CompanyID_FK { get; set; }
+        public int CompanyIdFk { get; set; }
         public Company Company { get; set; }
 
 

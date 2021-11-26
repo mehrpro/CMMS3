@@ -1,4 +1,4 @@
-﻿using CMMS3.Models;
+﻿using CMMS3.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;

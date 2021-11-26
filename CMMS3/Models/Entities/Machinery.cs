@@ -18,13 +18,13 @@ namespace CMMS3.Models.Entities
 
         }
 
-        public int ID { get; set; }
+        public int Id { get; set; }
         public bool IsActive { get; set; }
         public bool IsDelete { get; set; }
-        public int CompanyID { get; set; }
-        public long IdentityCodeID_FK { get; set; }
+        public int CompanyId { get; set; }
+        public long IdentityCodeIdFk { get; set; }
         public IdentityCode IdentityCode { get; set; }
-        public int ApplicantID_FK { get; set; }
+        public int ApplicantIdFk { get; set; }
         public Applicant Applicant { get; set; }
 
         public string MachineryTitle { get; set; }

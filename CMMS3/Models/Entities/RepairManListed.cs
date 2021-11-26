@@ -4,7 +4,7 @@
     {
 
 
-        public long ID { get; set; }
+        public long Id { get; set; }
         public int RepairManIdFk { get; set; }
         public RepairMan RepairMan { get; set; }
         public long WorkOrderIdFk { get; set; }

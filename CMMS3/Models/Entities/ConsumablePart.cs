@@ -3,12 +3,12 @@ namespace CMMS3.Models.Entities
 {
     public class ConsumablePart
     {
-        public long ID { get; set; }
-        public long RequestID_FK { get; set; }
+        public long Id { get; set; }
+        public long RequestIdFk { get; set; }
         public RequestRepair RequestRepair { get; set; }
         public string ConsumablePartTitel { get; set; }
         public int Number { get; set; }
-        public int UnitID_FK { get; set; }
+        public int UnitIdFk { get; set; }
         public UnitOfMeasurement UnitOfMeasurement { get; set; }
     }
 }

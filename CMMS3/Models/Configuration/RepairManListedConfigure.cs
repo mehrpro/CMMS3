@@ -8,8 +8,8 @@ namespace CMMS3.Models.Configuration
     {
         public void Configure(EntityTypeBuilder<RepairManListed> builder)
         {
-            builder.HasKey(x => x.ID);
-            builder.Property(x => x.ID).IsRequired();
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).IsRequired();
             builder.Property(x => x.IsDelete).IsRequired();
             builder.Property(x => x.RepairManIdFk).IsRequired();
             builder.Property(x => x.WorkOrderIdFk).IsRequired();

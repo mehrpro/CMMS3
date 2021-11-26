@@ -10,7 +10,7 @@ namespace CMMS3.Models.Entities
             RequestRepairs = new HashSet<RequestRepair>();
         }
 
-        public int ID { get; set; }
+        public int Id { get; set; }
         public int Group { get; set; }
         public string Title { get; set; }
 

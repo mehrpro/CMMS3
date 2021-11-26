@@ -8,12 +8,12 @@ namespace CMMS3.Models.Configuration
     {
         public void Configure(EntityTypeBuilder<PowerElectricalMachinery> builder)
         {
-            builder.HasKey(x => x.ID);
-            builder.Property(x => x.ID).IsRequired();
-            builder.Property(x => x.MachineryID_FK).IsRequired();
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).IsRequired();
+            builder.Property(x => x.MachineryIdFk).IsRequired();
             builder.Property(x => x.Manifactor).HasMaxLength(250);
             builder.Property(x => x.Title).HasMaxLength(250);
-            builder.Property(x => x.KW).HasMaxLength(10);
+            builder.Property(x => x.Kw).HasMaxLength(10);
             builder.Property(x => x.Voltag).HasMaxLength(10);
             builder.Property(x => x.Amper).HasMaxLength(10);
             builder.Property(x => x.IsDelete).IsRequired();

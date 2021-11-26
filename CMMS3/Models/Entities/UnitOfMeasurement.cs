@@ -16,7 +16,7 @@ namespace CMMS3.Models.Entities
         }
 
 
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Unit { get; set; }
         public string Description { get; set; }
 

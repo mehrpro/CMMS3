@@ -8,15 +8,15 @@ namespace CMMS3.Models.Configuration
     {
         public void Configure(EntityTypeBuilder<RepairMan> builder)
         {
-            builder.HasKey(x => x.ID);
-            builder.Property(x => x.ID).IsRequired();
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).IsRequired();
             builder.Property(x => x.IsActive).IsRequired();
-            builder.Property(x => x.Repairman_FullName).IsRequired().HasMaxLength(250);
-            builder.Property(x => x.RepairMan_Status).IsRequired().HasMaxLength(250);
+            builder.Property(x => x.RepairmanFullName).IsRequired().HasMaxLength(250);
+            builder.Property(x => x.RepairManStatus).IsRequired().HasMaxLength(250);
             builder.HasMany(x => x.RepairManListeds)
                 .WithOne(x => x.RepairMan)
                 .HasForeignKey(x => x.RepairManIdFk)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

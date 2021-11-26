@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CMMS3.Models.Entities
 {
@@ -17,10 +18,14 @@ namespace CMMS3.Models.Entities
             UserApplications = new HashSet<UserApplication>();
         }
 
-        public int ID { get; set; }
+        public int Id { get; set; }
         public byte CompnayIndex { get; set; }
         public string CompanyTitle { get; set; }
         public string Description { get; set; }
+        public bool IsActive { get; set; }
+        public bool IsDelete { get; set; }
+        public DateTime DateDelete { get; set; }
+
 
 
 

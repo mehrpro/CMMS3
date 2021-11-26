@@ -9,8 +9,8 @@ namespace CMMS3.Models.Entities
             SubGroups = new HashSet<SubGroup>();
             IdentityCodes = new HashSet<IdentityCode>();
         }
-        public int ID { get; set; }
-        public int CompanyID_FK { get; set; }
+        public int Id { get; set; }
+        public int CompanyIdFk { get; set; }
         public Company Company { get; set; }
         public byte GroupIndex { get; set; }
         public string GroupTitle { get; set; }

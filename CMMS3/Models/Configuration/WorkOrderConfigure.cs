@@ -9,16 +9,16 @@ namespace CMMS3.Models.Configuration
         public void Configure(EntityTypeBuilder<WorkOrder> builder)
         {
 
-            builder.HasKey(x => x.ID);
-            builder.Property(x => x.ID).IsRequired();
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).IsRequired();
             builder.Property(x => x.IsDelete).IsRequired();
             builder.Property(x => x.WorkingTotalMin).IsRequired();
             builder.Property(x => x.StopTotalMin).IsRequired();
-            builder.Property(x => x.RequestID_FK).IsRequired();
+            builder.Property(x => x.RequestIdFk).IsRequired();
             builder.Property(x => x.RepairOutside).IsRequired();
-            builder.Property(x => x.Cause_Exhaustion).IsRequired();
-            builder.Property(x => x.Cause_OperatorNegligence).IsRequired();
-            builder.Property(x => x.Cause_QualityofSpareParts).IsRequired();
+            builder.Property(x => x.CauseExhaustion).IsRequired();
+            builder.Property(x => x.CauseOperatorNegligence).IsRequired();
+            builder.Property(x => x.CauseQualityofSpareParts).IsRequired();
             builder.Property(x => x.Other).IsRequired();
             builder.Property(x => x.OtherError).IsRequired();
             builder.Property(x => x.PersonHours).IsRequired();
@@ -36,7 +36,7 @@ namespace CMMS3.Models.Configuration
             builder.HasMany(x => x.RepairManListeds)
                 .WithOne(x => x.WorkOrder)
                 .HasForeignKey(x => x.WorkOrderIdFk)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

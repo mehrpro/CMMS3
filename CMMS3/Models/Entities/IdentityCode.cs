@@ -11,14 +11,14 @@ namespace CMMS3.Models.Entities
             Machineries = new HashSet<Machinery>();
         }
 
-        public long ID { get; set; }
-        public int CompanyID_FK { get; set; }
+        public long Id { get; set; }
+        public int CompanyIdFk { get; set; }
         public Company Company { get; set; }
-        public int GroupID_FK { get; set; }
+        public int GroupIdFk { get; set; }
         public Group Group { get; set; }
-        public int SubGroupID_FK { get; set; }
+        public int SubGroupIdFk { get; set; }
         public SubGroup SubGroup { get; set; }
-        public string UserID_FK { get; set; }
+        public string UserIdFk { get; set; }
         public UserApplication UserApplication { get; set; }
         public short CodeIndex { get; set; }
         public int Code { get; set; }

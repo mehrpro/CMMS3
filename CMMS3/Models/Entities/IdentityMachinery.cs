@@ -4,14 +4,14 @@ namespace CMMS3.Models.Entities
 {
     public class IdentityMachinery
     {
-        public int ID { get; set; }
-        public int MachinerID_FK { get; set; }
+        public int Id { get; set; }
+        public int MachinerIdFk { get; set; }
         public Machinery Machinery { get; set; }
         public string TypeDevice { get; set; }
-        public DateTime dateTimeImport { get; set; }
-        public DateTime dateTimeStart { get; set; }
-        public DateTime dateStartWaranty { get; set; }
-        public DateTime dateEndWaranty { get; set; }
+        public DateTime DateTimeImport { get; set; }
+        public DateTime DateTimeStart { get; set; }
+        public DateTime DateStartWaranty { get; set; }
+        public DateTime DateEndWaranty { get; set; }
         public bool Calibration { get; set; }
         public bool NewDivice { get; set; }
         public int Length { get; set; }

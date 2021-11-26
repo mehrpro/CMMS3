@@ -16,22 +16,22 @@ namespace CMMS3.Models.Entities
 
         }
 
-        public long ID { get; set; }
+        public long Id { get; set; }
         public bool IsActive { get; set; }
         public bool IsRepairOut { get; set; }
         public bool IsDelete { get; set; }
         public bool IsClose { get; set; }
-        public bool EM { get; set; }
-        public int CompanyID_FK { get; set; }
+        public bool Em { get; set; }
+        public int CompanyIdFk { get; set; }
         public Company Company { get; set; }
-        public int MachineryID_FK { get; set; }
+        public int MachineryIdFk { get; set; }
         public Machinery Machinery { get; set; }
-        public string UserID_FK { get; set; }
+        public string UserIdFk { get; set; }
         public UserApplication UserApplication { get; set; }
         public DateTime RequestDataTime { get; set; }
-        public int PublicTypeID_FK { get; set; }
+        public int PublicTypeIdFk { get; set; }
         public PublicType PublicType { get; set; }
-        public int ApplicantID_FK { get; set; }
+        public int ApplicantIdFk { get; set; }
         public Applicant Applicant { get; set; }
         public string RequestTitle { get; set; }
 

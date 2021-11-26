@@ -1,0 +1,49 @@
+﻿@model IEnumerable<CMMS3.Models.DTO.CompanyDTO.CompanyListDTO>
+
+@{
+    ViewData["Title"] = "شرکت ها";
+}
+
+<h4>فهرست شرکت ها</h4>
+<br />
+
+<p>
+    <a asp-action="Create" class="btn btn-primary btn-sm">جدید</a>
+</p>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CompnayIndex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompnayIndex)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">ویرایش</a> |
+
+                    <a asp-action="Delete" asp-route-id="@item.Id">حذف</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

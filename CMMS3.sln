@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMMS3", "CMMS3\CMMS3.csproj", "{D8FB2DAC-241E-4E48-8DA2-8EAF17EB87A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CMMS3", "CMMS3\CMMS3.csproj", "{D8FB2DAC-241E-4E48-8DA2-8EAF17EB87A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersianTranslation", "PersianTranslation\PersianTranslation.csproj", "{EA542A49-1ED0-4718-ACD3-D077CDA9C62A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D8FB2DAC-241E-4E48-8DA2-8EAF17EB87A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8FB2DAC-241E-4E48-8DA2-8EAF17EB87A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8FB2DAC-241E-4E48-8DA2-8EAF17EB87A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA542A49-1ED0-4718-ACD3-D077CDA9C62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA542A49-1ED0-4718-ACD3-D077CDA9C62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA542A49-1ED0-4718-ACD3-D077CDA9C62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA542A49-1ED0-4718-ACD3-D077CDA9C62A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

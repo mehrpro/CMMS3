@@ -8,14 +8,14 @@ namespace CMMS3.Models.Configuration
     {
         public void Configure(EntityTypeBuilder<PublicType> builder)
         {
-            builder.HasKey(x => x.ID);
-            builder.Property(x => x.ID).IsRequired();
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).IsRequired();
             builder.Property(x => x.Title).IsRequired();
             builder.Property(x => x.Group).IsRequired();
             builder.HasMany(x => x.RequestRepairs)
                 .WithOne(x => x.PublicType)
-                .HasForeignKey(x => x.PublicTypeID_FK)
-                .OnDelete(DeleteBehavior.SetNull);
+                .HasForeignKey(x => x.PublicTypeIdFk)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

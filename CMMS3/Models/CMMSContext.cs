@@ -1,14 +1,24 @@
 ﻿using CMMS3.Models.Configuration;
 using CMMS3.Models.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using CMMS3.Models.DTO.CompanyDTO;
 
-namespace CMMS3
+namespace CMMS3.Models
 {
-    public class CMMSContext : IdentityDbContext
+    public class CmmsContext : IdentityDbContext<UserApplication, IdentityRole, string>
     {
-        public CMMSContext(DbContextOptions options) : base(options)
+        //public CmmsContext(DbContextOptions<CmmsContext> options) : base(options)
+        //{
+
+        //}
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder
+            .UseSqlServer(
+                "Data Source=(local);Initial Catalog=CMMS3;user id=sa;password=sa123sa;MultipleActiveResultSets=True;");
 
         }
 
@@ -56,6 +66,7 @@ namespace CMMS3
         public virtual DbSet<IdentityMachinery> IdentityMachineries { get; set; }
         public virtual DbSet<PowerElectricalMachinery> PowerElectricalMachineries { get; set; }
         public virtual DbSet<Repairout> Repairouts { get; set; }
+        public DbSet<CompanyListDTO> CompanyListDTO { get; set; }
 
 
     }
